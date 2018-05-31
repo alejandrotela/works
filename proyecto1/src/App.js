@@ -8,7 +8,7 @@ class App extends Component {
 
   state = {
     persons: [
-      {name: 'Estela', age: 1},
+      {name: 'Pelayo', age: 1},
       {name: 'Luis', age: 30},
       {name: 'Pedro', age: 60},
     ]  
@@ -38,9 +38,20 @@ class App extends Component {
   }
 
   render() {
+
+    const style ={
+      backgroundColor: 'white',
+      font: 'inherit',
+      border: '1px solid blue',
+      padding: '8px',
+      cursor: 'pointer'
+    }
+
     return (
       <div className='App'> 
-        <button onClick={() => this.switchNameHandler('Maximiliano')}>Switch Name</button>
+        <button
+          style={style} 
+          onClick={() => this.switchNameHandler('Maximiliano')}>Switch Name</button>
         <Person 
           name={this.state.persons[0].name} 
           age={this.state.persons[0].age}/>
